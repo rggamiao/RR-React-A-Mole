@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
+import moleImg from '../mole.png'
 
 const Mole = (props) => {
 
     useEffect(() => {
-        let randSeconds = Math.floor(Math.random() * 10000)
+        let randSeconds = Math.ceil(Math.random() * 10000)
         let timer = setTimeout(() => {
             props.toggle(false)
         }, randSeconds)
@@ -12,7 +13,7 @@ const Mole = (props) => {
 
     return (
         <div>
-            <button onClick={props.handleClick}>Mole</button>
+            <img style={{'width': '30vw'}} src={moleImg} onClick={props.handleClick} />
         </div>
     )
 }

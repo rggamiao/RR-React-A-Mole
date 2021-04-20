@@ -1,9 +1,10 @@
 import { useEffect } from "react"
+import MoleHill from '../molehill.png'
 
 const EmptySlot = (props) => {
 
     useEffect(() => {
-        let randSeconds = Math.floor(Math.random() * 10000)
+        let randSeconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
             props.toggle(true)
         }, randSeconds)
@@ -12,7 +13,7 @@ const EmptySlot = (props) => {
 
     return (
         <div>
-            <button>Hole</button>
+            <img style={{'width': '30vw'}} src={MoleHill} />
         </div>
     )
 }
