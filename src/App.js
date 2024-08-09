@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react'
 
 // import from file
-import MoleContainer from './Components/MoleContainer';
+import MoleContainer from './components/MoleContainer';
 
 function App(){
     let [score, setScore] = useState(0)
